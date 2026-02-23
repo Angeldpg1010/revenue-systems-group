@@ -25,10 +25,10 @@ export default function Home() {
 
       <a
         href="#diagnostico"
-        aria-label="Reservar diagnostico"
+        aria-label="Reservar diagnóstico gratuito"
         className="fixed right-4 bottom-4 left-4 z-50 rounded-lg bg-[#00B8F5] px-5 py-3 text-center text-sm font-semibold text-[#0A1B2E] shadow-lg transition hover:bg-[#20C6FC] focus:ring-2 focus:ring-[#0E2A47] focus:outline-none md:hidden"
       >
-        Reservar diagnostico
+        Reservar diagnóstico gratuito
       </a>
     </>
   );
