@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="border-b border-zinc-200">
       <div className="mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-32">
         <p className="text-sm font-medium uppercase tracking-[0.16em] text-zinc-500">
-          Domia Revenue Systems
+          Revenue Systems Group
         </p>
         <h1 className="mt-4 max-w-4xl text-4xl leading-tight font-semibold tracking-tight md:text-6xl">
           Aumentamos las ventas de empresas con equipo comercial automatizando
