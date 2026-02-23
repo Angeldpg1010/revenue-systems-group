@@ -9,7 +9,8 @@ export default function Qualification() {
           Tienen entre 2 y 20 comerciales. Reciben leads de forma constante.
           Quieren vender más sin aumentar gasto en marketing. Buscan estructura
           y control en su proceso comercial. Si vuestro problema es falta de
-          leads, no somos la solución. Si el problema es gestión, sí.
+          leads, no somos la solución. Si el problema es gestión, sí. Si
+          buscáis marketing o generación de leads, no somos la solución.
         </p>
       </div>
     </section>

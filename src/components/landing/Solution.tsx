@@ -10,6 +10,8 @@ export default function Solution() {
           Centralizamos todos los leads, estructuramos el proceso de
           seguimiento y automatizamos tareas clave para que vuestro equipo
           responda antes, haga seguimiento constante y cierre más operaciones.
+          Implementamos un sistema probado que estructura vuestro proceso
+          comercial en lugar de añadir más herramientas.
         </p>
       </div>
     </section>

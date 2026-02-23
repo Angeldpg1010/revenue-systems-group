@@ -1,9 +1,12 @@
 const metrics = [
-  { value: "•", label: "Más cierres con el mismo volumen de leads." },
-  { value: "•", label: "Respuesta en minutos, no en horas." },
-  { value: "•", label: "Seguimiento automático sin perseguir comerciales." },
-  { value: "•", label: "Visibilidad total del estado de cada oportunidad." },
-  { value: "•", label: "Control real sobre el rendimiento del equipo." },
+  { value: "•", label: "Más cierres sin aumentar inversión en marketing." },
+  { value: "•", label: "Respuesta en minutos para no enfriar oportunidades." },
+  {
+    value: "•",
+    label: "Cada lead recibe seguimiento sin depender de la memoria del comercial.",
+  },
+  { value: "•", label: "Visibilidad completa del estado y próximo paso de cada oportunidad." },
+  { value: "•", label: "Control real del rendimiento comercial con datos claros." },
 ];
 
 export default function Results() {

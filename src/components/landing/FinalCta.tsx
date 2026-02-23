@@ -108,7 +108,9 @@ export default function FinalCta() {
 
       setStatus("success");
       setFieldErrors({});
-      setFormMessage("Listo. Te contactaremos en breve para agendar.");
+      setFormMessage(
+        "Solicitud recibida. Te contactaremos en menos de 24h para agendar el diagnóstico.",
+      );
       setFormData(initialData);
       (window as { trackEvent?: (event: string, params?: Record<string, string>) => void })
         .trackEvent?.("lead_submit", { team_size: formData.tamanoEquipo });
@@ -125,8 +127,7 @@ export default function FinalCta() {
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10">
         <div className="rounded-2xl bg-[#0E2A47] p-8 text-white md:p-12">
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Si tenéis leads pero no tenéis control, es momento de estructurar
-            el sistema.
+            Tenéis leads. Ahora necesitáis sistema.
           </h2>
           <p className="mt-4 max-w-2xl text-zinc-200">
             Revisamos vuestro proceso actual y os diremos exactamente qué
@@ -139,6 +140,9 @@ export default function FinalCta() {
           >
             Reservar diagnóstico gratuito
           </a>
+          <p className="mt-3 max-w-2xl text-sm text-zinc-200">
+            15 minutos para detectar exactamente dónde estáis perdiendo ventas.
+          </p>
 
           <form className="mt-8 grid gap-5" onSubmit={onSubmit} noValidate>
             <div className="grid gap-2">
@@ -300,7 +304,7 @@ export default function FinalCta() {
               disabled={isLoading}
               className="inline-flex w-fit rounded-md bg-[#00B8F5] px-6 py-3 font-semibold text-[#0A1B2E] transition hover:bg-[#20C6FC] focus:ring-2 focus:ring-white focus:outline-none disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {isLoading ? "Enviando…" : "Enviar y reservar diagnóstico"}
+              {isLoading ? "Enviando…" : "Reservar diagnóstico gratuito"}
             </button>
 
             {formMessage ? (
@@ -311,6 +315,10 @@ export default function FinalCta() {
                 {formMessage}
               </p>
             ) : null}
+
+            <p className="text-sm text-zinc-200">
+              Confidencial. Sin permanencia. Respuesta en menos de 24h.
+            </p>
           </form>
         </div>
       </div>
