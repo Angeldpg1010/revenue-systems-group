@@ -2,15 +2,27 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
+const siteUrl = "https://domiarevenuesystems.com";
+
 export const metadata: Metadata = {
-  title: "Revenue Systems Group",
+  metadataBase: new URL(siteUrl),
+  title: "Automatización Comercial para Equipos de Ventas | Domia Revenue Systems",
   description:
-    "B2B consulting landing for companies in Spain that want to close more sales with CRM and lead automation.",
+    "Implementamos sistemas CRM y automatización para que ningún lead se pierda y vuestro equipo comercial cierre más ventas.",
   openGraph: {
-    title: "Revenue Systems Group",
+    title: "Automatización Comercial para Equipos de Ventas | Domia Revenue Systems",
     description:
-      "Close more sales by automating lead management with CRM and workflows.",
+      "Implementamos sistemas CRM y automatización para que ningún lead se pierda y vuestro equipo comercial cierre más ventas.",
+    url: siteUrl,
+    siteName: "Domia Revenue Systems",
+    locale: "es_ES",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Automatización Comercial para Equipos de Ventas | Domia Revenue Systems",
+    description:
+      "Implementamos sistemas CRM y automatización para que ningún lead se pierda y vuestro equipo comercial cierre más ventas.",
   },
 };
 
@@ -19,6 +31,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Domia Revenue Systems",
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
+    sameAs: [],
+    description:
+      "Implementamos sistemas CRM y automatización para que ningún lead se pierda y vuestro equipo comercial cierre más ventas.",
+  };
+
   const analyticsHelper = `
     (function () {
       window.trackEvent = function (eventName, params) {
@@ -53,9 +76,15 @@ export default function RootLayout({
   `;
 
   return (
-    <html lang="es">
-      <body className="antialiased">
+    <html lang="es" className="scroll-smooth">
+      <body className="antialiased pb-24 md:pb-0">
         {children}
+        <Script
+          id="organization-jsonld"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <Script id="analytics-helper" strategy="afterInteractive">
           {analyticsHelper}
         </Script>
