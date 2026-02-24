@@ -1,9 +1,9 @@
-import BrokerSolution from "@/components/landing/BrokerSolution";
+import ArchitectureSolution from "@/components/landing/ArchitectureSolution";
 import BusinessModel from "@/components/landing/BusinessModel";
 import Credibility from "@/components/landing/Credibility";
 import FinalCta from "@/components/landing/FinalCta";
 import Footer from "@/components/landing/Footer";
-import HeroBroker from "@/components/landing/HeroBroker";
+import Hero from "@/components/landing/Hero";
 import Method from "@/components/landing/Method";
 import Problem from "@/components/landing/Problem";
 import ProjectTypes from "@/components/landing/ProjectTypes";
@@ -12,9 +12,9 @@ export default function Home() {
   return (
     <>
       <main>
-        <HeroBroker />
+        <Hero />
         <Problem />
-        <BrokerSolution />
+        <ArchitectureSolution />
         <ProjectTypes />
         <Method />
         <BusinessModel />
